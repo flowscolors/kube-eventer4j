@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    name: kube-eventer4j
+  name: kube-eventer4j
+  namespace: kube-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kube-eventer4j
+  template:
+    metadata:
+      labels:
+        app: kube-eventer4j
+    spec:
+      containers:
+        - image: jiangnanshi/kube-eventer4j:0.1.0
+          name: kube-eventer4j
+          env:
+            # If TZ is assigned, set the TZ value as the time zone
+            - name: TZ
+              value: "Asia/Shanghai"
+            - name: source
+              value: "kubernetes:url=[your_k8s_apiserver like https://47.111.145.31:6443]&token=[your_k8s_token]"
+            - name: sink
+              value: "minio:url=[your_minio_url]&accessKey=[your_accessKey]&secretKey=[your_secretKey]&bucket=[your_bucket];
+                      redis:url=[your_redis_url]&requirepass=[your_redis_password  Default value : none];
+                      kafka:brokers=[your_brokers like 101.37.160.226:9091,101.37.160.226:9092]&eventstopic=[your_topic_name];
+                      mysql:url=[your_webhook_url like https://116.85.64.120:4000/kube_event4j]&username=[your_username]&password=[your_password]"
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 500m
+              memory: 250Mi
