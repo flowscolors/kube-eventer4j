@@ -7,7 +7,7 @@
   &nbsp;&nbsp;&nbsp;&nbsp;如果您想要了解什么是Kubernetes，请点击[what-is-kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)。  
   &nbsp;&nbsp;&nbsp;&nbsp;如果您想要了解什么是Kube-eventer，请点击[Kube-eventer](https://github.com/AliyunContainerService/kube-eventer)。  
   
-  &nbsp;&nbsp;&nbsp;&nbsp;该项目主要起源学习Java、Kubernetes两年进行的实践，仅做学习使用。相比Kube-eventer原有实现的9种sink，实现了4种sink，新增了redis sink、minio sink两种客户端。设计上该项目提升了Kubernetes Client版本，支持Kubernetes 1.20.2的资源模型。采用Token连接Kuberetes集群的方法，代替原有的域名连接Apiserver的方法，从而支持多Kubernetes集群Event收集。  
+  &nbsp;&nbsp;&nbsp;&nbsp;该项目主要想法起源于学习Java、Kubernetes两年，想通过实践来进行知识点总结，仅做学习使用。相比Kube-eventer原有实现的9种sink，实现了4种sink，新增了redis sink、minio sink两种客户端。设计上该项目提升了Kubernetes Client版本，支持Kubernetes 1.20.2的资源模型。采用Token连接Kuberetes集群的方法，代替原有的域名连接Apiserver的方法，从而支持多Kubernetes集群Event收集。  
 
 
   &nbsp;&nbsp;&nbsp;&nbsp;涉及知识点:
@@ -122,4 +122,4 @@ _*MInio sink 接受Kubernetes events*_
 
 ### 协议
 
-本作品代码采用 [Apache 2.0协议](https://www.apache.org/licenses/LICENSE-2.0)进行许可。遵循许可的前提下，你可以自由地对代码进行修改，再发布，可以将代码用作商业用途。
+本作品代码采用 Apache 2.0 license  [Apache 2.0协议](https://www.apache.org/licenses/LICENSE-2.0)进行许可。遵循许可的前提下，你可以自由地对代码进行修改，再发布，可以将代码用作商业用途。
