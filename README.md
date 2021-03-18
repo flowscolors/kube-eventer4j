@@ -5,8 +5,8 @@
   &nbsp;&nbsp;本项目参考Go语言的Kube-eventer项目，实现了一版基于Java的Kube-eventer，即Kube-eventer4j。Kube-event4j是一个事件发送程序，用来把Kubernetes实时的Event信息，推送给不同的客户端（例如Redis、MySQL、Kafka等）。  
   &nbsp;&nbsp;如果您想要了解什么是Kubernetes，请点击[what-is-kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)。  
   &nbsp;&nbsp;如果您想要了解什么是Kube-eventer，请点击[Kube-eventer](https://github.com/AliyunContainerService/kube-eventer)。  
-  &nbsp;&nbsp;本项目主要侧重对使用Java、Kubernetes两年进行的知识总结，仅做学习使用。本项目相比Kube-eventer原有实现的9种sink，仅实现了4种sink，但是新增了redis sink、minio sink两种客户端。  
-  &nbsp;&nbsp;本项目提升了Kubernetes Client版本，支持Kubernetes 1.20.2的资源模型。采用Token连接Kuberetes集群，替换原有的域名连接Apiserver，从而支持多Kubernetes集群Event收集。  
+  
+  &nbsp;&nbsp;该项目主要起源学习Java、Kubernetes两年进行的实践，仅做学习使用。相比Kube-eventer原有实现的9种sink，实现了4种sink，新增了redis sink、minio sink两种客户端。设计上该项目提升了Kubernetes Client版本，支持Kubernetes 1.20.2的资源模型。采用Token连接Kuberetes集群的方法，代替原有的域名连接Apiserver的方法，从而支持多Kubernetes集群Event收集。  
 
 
   &nbsp;&nbsp;涉及知识点:
