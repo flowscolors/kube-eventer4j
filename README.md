@@ -1,7 +1,7 @@
 ## Kube-eventer4j
 
 
-### Overview
+### 这是什么？
   &nbsp;&nbsp;本项目参考Go语言的Kube-eventer项目，实现了一版基于Java的Kube-eventer，即Kube-eventer4j。Kube-event4j是一个事件发送程序，用来把Kubernetes实时的Event信息，推送给不同的客户端（例如Redis、MySQL、Kafka等）。  
   &nbsp;&nbsp;如果您想要了解什么是Kubernetes，请点击[what-is-kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)。  
   &nbsp;&nbsp;如果您想要了解什么是Kube-eventer，请点击[Kube-eventer](https://github.com/AliyunContainerService/kube-eventer)。  
@@ -27,7 +27,7 @@
 
 
 
-### Usage
+### 如何使用？
 
 
 0.使用Kube-eventer4j需要获得Kubernetes集群Token(类似设计的有Kubernetes dashboard 、KubeApps dashboard)。您需要知道如何获得对应权限的Token（[Kubernetes authentication](https://kubernetes.io/docs/reference/access-authn-authz/authentication/)）。
@@ -119,7 +119,6 @@ _*MInio sink 接受Kubernetes events*_
 
 
 
-### License
+### 协议
 
-
-This software is released under the Apache 2.0 license.
+本作品代码采用 [Apache 2.0协议](https://www.apache.org/licenses/LICENSE-2.0)进行许可。遵循许可的前提下，你可以自由地对代码进行修改，再发布，可以将代码用作商业用途。
