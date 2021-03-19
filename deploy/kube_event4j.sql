@@ -6,7 +6,7 @@ create table kube_event4j
 (
     id               bigint(20)   not null auto_increment primary key comment 'event primary key',
     cluster_name     varchar(64)  not null default '' comment 'cluster name',
-    event_name       varchar(64)  not null default '' comment 'event name',
+    event_name       varchar(128)  not null default '' comment 'event name',
     event_namespace  varchar(64)  not null default '' comment 'event namespace',
     event_id         varchar(64)  not null default '' comment 'event_id',
     type             varchar(64)  not null default '' comment 'event type Warning or Normal',
